@@ -26,6 +26,16 @@ dropDown.addEventListener("change", (e) => {
         div1.appendChild(img);
     })
 })
+// can write function this way too:
+// dropDown.addEventListener("change", function () {
+//     let value = e.target.value;
+//     $.get(`https://dog.ceo/api/breed/${value}/images/random`)
+
+//     .then((data) => {
+//         img.setAttribute("src", data.message);
+//         div1.appendChild(img);
+//     })
+// })
 
 dogButton.addEventListener("click", () => {
     dogButton.textContent = "Generating Dog..."
@@ -33,6 +43,6 @@ dogButton.addEventListener("click", () => {
         .then((data) => {
             img.setAttribute("src", data.message);
             div1.appendChild(img);
-            dogButton.textContent = "Generate Dog";
+            dogButton.textContent = "See Rottweiler Pics";
         })    
 })
